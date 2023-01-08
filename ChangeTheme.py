@@ -18,7 +18,7 @@ if os.name == 'nt':
 		_, frames = theme.webcam.read()
 		gray_frame = cv2.cvtColor(frames, cv2.COLOR_BGR2GRAY)
 
-		is_light = round(np.average(gray_frame)) > 55
+		is_light = round(np.average(gray_frame)) > 60 #change value of gray average
 
 		if is_light != theme.current:
 			theme.changeTheme(is_light)
